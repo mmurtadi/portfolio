@@ -77,12 +77,12 @@ aside {
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #FFC222;
+  color: #233e79;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-weight: 700;
   font-size: 12px;
-  color: #222222;
+  color: #233e79;
   text-transform: uppercase;
 }
 .navbar-default .nav > li > a,
