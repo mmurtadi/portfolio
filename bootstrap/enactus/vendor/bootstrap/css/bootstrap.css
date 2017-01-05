@@ -1586,7 +1586,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  background-image: url('.../img/small.png');
+  background-image: url('img/small.png');
   background-repeat: repeat;
   background-color: transparent;
 
