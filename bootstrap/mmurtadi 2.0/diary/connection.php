@@ -1,9 +1,9 @@
 <?php
 
-$link= mysqli_connect("localhost", "cl43-murtadidb", "TqJMm/-U^", "cl43-murtadidb");
+$link= mysqli_connect("localhost", "#", "#", "#");
 
 if (mysqli_connect_error()) {
-  die("Could NOt connect to database");
+  die("Could Not connect to database");
 }
 
 ?>
