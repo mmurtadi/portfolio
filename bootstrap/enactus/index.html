@@ -21,6 +21,9 @@
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
+    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.6"></script>    
 
     <!-- Theme CSS FFC222 -->
     <link href="css/creative.min.css" rel="stylesheet">
@@ -277,13 +280,17 @@
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your first and last name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
-                        <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text"></div>
-                        <div class="form-group"><label>Phone</label><input class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)" type="text"></div>                        
-                        <div class="form-group"><label>Your idea</label><textarea class="form-control" placeholder="In a sentance or two, explain your concept" data-placement="top" data-trigger="manual"></textarea></div>
-                        <div class="form-group"><label>Status of project</label><textarea class="form-control" placeholder="What have you done so far in starting this project" data-placement="top" data-trigger="manual"></textarea></div>
-                        <div class="form-group"><label>Financial Literacy, Entrepreneurship, Environmental Sustainability</label><textarea class="form-control" placeholder="How does this idea correlate with our three pillars" data-placement="top" data-trigger="manual"></textarea></div>
-                        <div class="form-group"><label>Other</label><textarea class="form-control" placeholder="Any other comments or concerns" data-placement="top" data-trigger="manual"></textarea></div>                    
+                        <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your first and last name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text" id="name">
+                        </div>
+                        <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text" id="email"></div>
+                        <div class="form-group"><label>Phone</label><input class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)" type="text" id="phone"></div>                        
+                        <div class="form-group"><label>Your idea</label><textarea class="form-control" placeholder="In a sentance or two, explain your concept" data-placement="top" data-trigger="manual" id="idea"></textarea></div>
+
+                        <div class="form-group"><label>Status of project</label><textarea class="form-control" placeholder="What have you done so far in starting this project" data-placement="top" data-trigger="manual" id="status"></textarea></div>
+
+                        <div class="form-group"><label>Financial Literacy, Entrepreneurship, Environmental Sustainability</label><textarea class="form-control" placeholder="How does this idea correlate with our three pillars" data-placement="top" data-trigger="manual" id="triple"></textarea></div>
+
+                        <div class="form-group"><label>Other</label><textarea class="form-control" placeholder="Any other comments or concerns" data-placement="top" data-trigger="manual" id="misc."></textarea></div>                    
 
                         <div class="form-group"><button type="submit" class="btn btn-success pull-left">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
                     </form>                                                         
@@ -310,11 +317,9 @@
                 </p>                                        
             </div>                    
             <div class="col-lg-4 col-lg text-center">
-                <i class="fa fa-home fa-2x sr-contact"><br>Odette School of Business<br>
+                <i class="fa fa-home fa-2x sr-contact"><br><br>Odette School of Business<br>
                 401 Sunset Ave. Suite 324<br>
-                Windsor, ON N9B 3P4<br>
-                "ATTN: Enactus Windsor"</i>
-                <p></p>
+                Windsor, ON N9B 3P4</i>
             </div>
 
             <div class="col-lg text-center">
@@ -330,7 +335,7 @@
 </section>
 
 <div class="container text-center">
-    <span class="copyright">Copyright &copy; Enactus Windsor</span>
+    <span class="copyright">Copyright &copy; Enactus Windsor 2017</span>
     <br><a href="#">powered by Jim Marsh</a>
 </div>
 
@@ -392,7 +397,6 @@
 
     <div class="modal fade" id="teamMember" role="dialog">
         <div class="modal-dialog modal-lg">
-        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -403,12 +407,52 @@
                 </div>
                 
                     <div class="modal-body">
-                        <div class="modal-body">
-                            <div class="row center-block">
-
-                                <img src="img\team.jpg" class="img-responsive center-block" >                    
-                            </div>
+                        <div class="row center-block">
+                            <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="img/lightbox/1.jpg" alt="" /></a>
+                            <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="img/lightbox/2.jpg" alt="" /></a>
                         </div>
+                        <div class="row center-block">
+                            <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="img/lightbox/3.jpg" alt="" /></a>
+                            <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="img/lightbox/4.jpg" alt="" /></a>
+                        </div>
+                        <div>
+                            <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="img/lightbox/5.jpg" alt="" /></a>
+                            <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="img/lightbox/6.jpg" alt="" /></a>
+                        </div>
+                            <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="img/lightbox/7.jpg" alt="" /></a>
+                            <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="img/lightbox/8.jpg" alt="" /></a>
+                        </div>
+                            <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="img/lightbox/9.jpg" alt="" /></a>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
                     </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -466,9 +510,11 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <img src="img/small.png" >
-                                
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <img src="img/small.png" style="float:left" >                    
+                        <div>
+                            <h3 id="myModalLabel" style="text-align:center">Our list of Sponsors!</h3>
+                        </div>
                 </div>
                     <div>  
                         <div class="service-box">
@@ -498,35 +544,31 @@
 
 <!-- releaf Modal -->
 
-
-
 <div class="container">
   <!-- Triggered with the button in the team section-->
 
     <div class="modal fade" id="releaf" role="dialog">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <img src="img/small.png" >
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <img src="img/small.png" style="float:left" >                    
+                        <div>
+                            <h3 id="myModalLabel" style="text-align:center">Project Releaf!</h3>
+                        </div>
 
                 </div>
                     <div class="modal-body">
-                        <div class="modal-body">
-                            <div class="row">
-                                <div>
-                                <!-- <img src="img\portfolio\releaf\thumb.png" class="center-block img-responsive"><br>                             
-                                <br>-->
-                                    <p>Project Releaf focuses on creating solutions to a community’s problem through the creation of local entrepreneurs with environmental sustainable business ideas. 
-                                    </p>
-                                    <p>Project Releaf has an extensive background with developing entrepreneurs in South Africa and Morocco who have established and sustained businesses that give clean drinking water to the villagers through the creation and distribution of eco-friendly water filters.</p> 
-                                    <p>Our current vision is to expand Project Releaf into Canada and concentrate on creating solutions to environmental issues. </p>   
-                                    <img src="img\execteam\pm\berk2.jpg" class="img-responsive center-block">
-
-                                </div>                        
-                            </div>
-                        </div>
-                    </div>
+                        <p>Project Releaf focuses on creating solutions to a community’s problem through the creation of local entrepreneurs with environmental sustainable business ideas. 
+                        </p>                                   
+                        <p>Project Releaf has an extensive background with developing entrepreneurs in South Africa and Morocco who have established and sustained businesses that give clean drinking water to the villagers through the creation and distribution of eco-friendly water filters.</p>
+                        <div>
+                            <img src="img\portfolio\releaf\3.jpg" class="center-block img-responsive"><br>
+                        </div>                    
+                        <p>Our current vision is to expand Project Releaf into Canada and concentrate on creating solutions to environmental issues.</p>
+                        <div>
+                            <img src="img\execteam\pm\berk2.jpg" class="img-responsive center-block">
+                        </div>                        
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
@@ -540,18 +582,26 @@
 <div class="container">
 
     <div class="modal fade" id="cookstart" role="dialog">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <img src="img/small.png" >
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <img src="img/small.png" style="float:left" >                    
+                        <div>
+                            <h3 id="myModalLabel" style="text-align:center">CookStart!</h3>
+                        </div>
 
                 </div>
                 <div class="modal-body">
                     <!--<img src="img\portfolio\cookstart\thumb.png" class="center-block img-responsive"><br>                             
                     <br>  -->              
+
                     <p>CookStart is a one-on-one consulting program that aims to support individuals to develop a sustainable food business. These are individuals that have struggled to secure other employment alternatives due to a lack of education or particular skill sets and have a passion for food. </p>
-                    <p>We recruit prospective clients through the New Canadian Centre of Excellence and Windsor-Women-Working-With-Immigrant-Women, among other community partners. Clients work with student consultants, financial planners, and restaurant industry leaders throughout the twelve week program.</p> 
+
+                    <p>We recruit prospective clients through the New Canadian Centre of Excellence and Windsor-Women-Working-With-Immigrant-Women, among other community partners. Clients work with student consultants, financial planners, and restaurant industry leaders throughout the twelve week program.</p>
+                    <div>
+                        <img src="img\portfolio\cookstart\1.jpg" class="center-block img-responsive"><br>
+                    </div>
                     <p>CookStart empowers clients to generate a reliable stream of income, allowing them to improve the lives of not only themselves, but also their families.</p>
                     <img src="img\execteam\pm\brun2.jpg" class="img-responsive center-block">
 
@@ -569,16 +619,28 @@
 <div class="container">
 
     <div class="modal fade" id="soup" role="dialog">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <img src="img/small.png" >
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <img src="img/small.png" style="float:left" >                    
+                        <div>
+                            <h3 id="myModalLabel" style="text-align:center">Windsor SOUP!</h3>
+                        </div>
 
                 </div>
                 <div class="modal-body">
-                    <img src="img\portfolio\soup\thumb.png" class="center-block img-responsive"><br>                             
-                    <br>                
+                    <p>Windsor SOUP is a monthly micro-funding dinner that brings the community together through a unique collaboration of social and environmental projects. Each project directly impacts the community and influences positive change. Presenters will have the opportunity to raise awareness while addressing the need and impact of their project. </p>
+                    <div>
+                        <img src="img\portfolio\soup\1.jpg" class="center-block img-responsive"><br>
+                    </div>                    
+                    <p>Each person that attends makes a minimum donation of $5. This provides them with soup, salad, dessert, and a vote. Attendees will get the opportunity to socialize and learn about the many local projects that work to improve our community. Each event follows a 4:4:4 format; 4 projects present for 4 minutes, followed by 4 questions. At the end of the presentations votes are cast. The project that gets the most votes by the end of the night receives the collected donations at the door. </p>
+                    <div>
+                        <img src="img\portfolio\soup\2.jpg" class="center-block img-responsive"><br>
+                    </div>                     
+
+                    <p>The P. and L. Odette Foundation also matches the amount raised throughout the night and donates it to the winner. In addition, Libro Credit Union donates $500 to the winning project. Each project gets the opportunity to network with community members and receive valuable feedback and ideas for their venture. This allows the projects to grow and evolve while raising awareness of local initiatives. 
+                    </p>               
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -593,22 +655,27 @@
 <div class="container">
 
     <div class="modal fade" id="citythrive" role="dialog">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <img src="img/small.png" >
-
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <img src="img/small.png" style="float:left" >                    
+                        <div>
+                            <h3 id="myModalLabel" style="text-align:center">CityThrive!</h3>
+                        </div>
                 </div>
                 <div class="modal-body">
                     <!--<img src="img\portfolio\citythrive\thumb.png" class="center-block img-responsive"><br>                             
-                    <br>   -->                   
+                    <br>   -->
                     <p>CityThrive is a 12 week program that provides business consultation to entrepreneurs on social assistance. Through our curriculum, we provide instruction on business fundamentals such as marketing, operations, financing and market analysis. </p>
+                    <div>
+                        <img src="img\portfolio\citythrive\2.jpg" class="center-block img-responsive"><br>
+                    </div>                    
                     <p>Consultants in this program will be partnered up with a client and will help them work through the curriculum and develop a business plan, as well as forge a relationship that has the potential to last a lifetime. 
                     </p>
-
-
                     <img src="img\execteam\pm\dhruv2.jpg" class="img-responsive center-block">
+
+                </div>
 
                 </div>
                 <div class="modal-footer">
@@ -624,21 +691,27 @@
 <div class="container">
 
     <div class="modal fade" id="youthrive" role="dialog">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <img src="img/small.png" > 
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <img src="img/small.png" style="float:left" >                    
+                        <div>
+                            <h3 id="myModalLabel" style="text-align:center">Youthrive!</h3>
+                        </div>
 
                 </div>
                 <div class="modal-body">
                     <!--<img src="img\portfolio\youthrive\thumb.png" class="center-block img-responsive"><br>                             
                     <br>   -->
-                    <h2> Youthrive! <h2>
-
                     <p>Youthrive is a 10 week program empowering gradeschool, highschool and at-risk youth through entrepreneurship. In 10 weeks, students effectively run their own microbusiness with the help of one-on-one mentorship, curriculum based learning, and a micro loan from the WFCU.</p>
+                    <div>
+                        <img src="img\portfolio\youthrive\1.jpg" class="center-block img-responsive"><br>
+                    </div>                    
                     <p>After the program, top ventures from each school compete at Youthx in front of a panel of judges, with the top 3 groups receiving investments from various sponsors. Youthrive has expanded to over 30 schools this year, representing substantial growth and potential for future entrepreneurs in Windsor/Essex.</p>
-                    <img src="img\execteam\pm\duo.jpg" class="img-responsive center-block">
+                    <img src="img\execteam\pm\fran.jpg" class="img-responsive center-block">
+                    <img src="img\execteam\pm\sam2.jpg" class="img-responsive center-block">
+
 
                 </div>
                 <div class="modal-footer">
@@ -654,7 +727,7 @@
 <div class="container">
 
     <div class="modal fade" id="other" role="dialog">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -672,6 +745,11 @@
     </div>
 </div>
 
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+
 
 
 
@@ -681,6 +759,12 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+    </script>
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
